@@ -10,5 +10,5 @@ class Agent:
         self.nearsight = 0
         self.stun = 0
         self.operator = 0
-        self.aoe = 0                    #nade, molly, sieze, pull
-        self.delay = 0                  #slow, sagewall, pull
+        self.flush = 0                  #nade, molly, aftershock, shock dart
+        self.delay = 0                  #slow, sagewall, pull, molly, nade, seize
