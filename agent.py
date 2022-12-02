@@ -1,6 +1,9 @@
+from role import Role
+
 class Agent:
     def __init__(self, name):
         self.name = name
+        self.role = 0
         self.smoke = 0
         self.trip = 0
         self.reconSoft = 0

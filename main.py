@@ -1,4 +1,5 @@
 from system import System
+from role import Role
 from omen import Omen
 from breach import Breach
 from chamber import Chamber
@@ -11,10 +12,9 @@ DEBUG = True
 todo:
     -add all agents
     -create text-based UI system
-    -change tests into assert statements
     -add class to handle the analysis (system class)
         -add validation/checks to system class
-    -add role to agents
+    -create test class to hold all the tests (so theyre not all in main.py)
 
 ideas:
     -recs based on map
@@ -27,6 +27,7 @@ ideas:
 def test_omen():
     player = Omen()
     print("---- TESTING OMEN ----")
+    assert(player.role == Role.CONTROLLER)
     assert(player.smoke == 1)
     assert(player.trip == 0)
     assert(player.reconSoft == 0)
@@ -42,6 +43,7 @@ def test_omen():
 def test_breach():
     player = Breach()
     print("---- TESTING BREACH ----")
+    assert(player.role == Role.INITIATOR)
     assert(player.smoke == 0)
     assert(player.trip == 0)
     assert(player.reconSoft == 0)
@@ -57,6 +59,7 @@ def test_breach():
 def test_chamber():
     player = Chamber()
     print("---- TESTING CHAMBER ----")
+    assert(player.role == Role.SENTINEL)
     assert(player.smoke == 0)
     assert(player.trip == 1)
     assert(player.reconSoft == 0)
@@ -72,6 +75,7 @@ def test_chamber():
 def test_kayo():
     player = Kayo()
     print("---- TESTING KAYO ----")
+    assert(player.role == Role.INITIATOR)
     assert(player.smoke == 0)
     assert(player.trip == 0)
     assert(player.reconSoft == 1)
@@ -87,6 +91,7 @@ def test_kayo():
 def test_sova():
     player = Sova()
     print("---- TESTING SOVA ----")
+    assert(player.role == Role.INITIATOR)
     assert(player.smoke == 0)
     assert(player.trip == 0)
     assert(player.reconSoft == 0)
