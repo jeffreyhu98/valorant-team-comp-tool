@@ -1,10 +1,5 @@
 from system import System
-from role import Role
-from omen import Omen
-from breach import Breach
-from chamber import Chamber
-from kayo import Kayo
-from sova import Sova
+from tests import Test
 
 DEBUG = True
 
@@ -24,93 +19,15 @@ ideas:
     -recs based on agents
 '''
 
-def test_omen():
-    player = Omen()
-    print("---- TESTING OMEN ----")
-    assert(player.role == Role.CONTROLLER)
-    assert(player.smoke == 1)
-    assert(player.trip == 0)
-    assert(player.reconSoft == 0)
-    assert(player.reconHard == 0)
-    assert(player.drone == 0)
-    assert(player.flash == 0)
-    assert(player.nearsight == 1)
-    assert(player.stun == 0)
-    assert(player.operator == 0)
-    assert(player.flush == 0)
-    assert(player.delay == 0)
-
-def test_breach():
-    player = Breach()
-    print("---- TESTING BREACH ----")
-    assert(player.role == Role.INITIATOR)
-    assert(player.smoke == 0)
-    assert(player.trip == 0)
-    assert(player.reconSoft == 0)
-    assert(player.reconHard == 0)
-    assert(player.drone == 0)
-    assert(player.flash == 2)
-    assert(player.nearsight == 0)
-    assert(player.stun == 1)
-    assert(player.operator == 0)
-    assert(player.flush == 1)
-    assert(player.delay == 0)
-
-def test_chamber():
-    player = Chamber()
-    print("---- TESTING CHAMBER ----")
-    assert(player.role == Role.SENTINEL)
-    assert(player.smoke == 0)
-    assert(player.trip == 1)
-    assert(player.reconSoft == 0)
-    assert(player.reconHard == 0)
-    assert(player.drone == 0)
-    assert(player.flash == 0)
-    assert(player.nearsight == 0)
-    assert(player.stun == 0)
-    assert(player.operator == 1)
-    assert(player.flush == 0)
-    assert(player.delay == 0)
-
-def test_kayo():
-    player = Kayo()
-    print("---- TESTING KAYO ----")
-    assert(player.role == Role.INITIATOR)
-    assert(player.smoke == 0)
-    assert(player.trip == 0)
-    assert(player.reconSoft == 1)
-    assert(player.reconHard == 0)
-    assert(player.drone == 0)
-    assert(player.flash == 2)
-    assert(player.nearsight == 0)
-    assert(player.stun == 0)
-    assert(player.operator == 0)
-    assert(player.flush == 1)
-    assert(player.delay == 1)
-
-def test_sova():
-    player = Sova()
-    print("---- TESTING SOVA ----")
-    assert(player.role == Role.INITIATOR)
-    assert(player.smoke == 0)
-    assert(player.trip == 0)
-    assert(player.reconSoft == 0)
-    assert(player.reconHard == 1)
-    assert(player.drone == 1)
-    assert(player.flash == 0)
-    assert(player.nearsight == 0)
-    assert(player.stun == 0)
-    assert(player.operator == 0)
-    assert(player.flush == 1)
-    assert(player.delay == 0)
-
 def main():
     if(DEBUG):
-        test_omen()
-        test_breach()
-        test_chamber()
-        test_kayo()
-        test_sova()
+        test = Test()
+        test.test_omen()
+        test.test_breach()
+        test.test_chamber()
+        test.test_kayo()
+        test.test_sova()
+
     sys = System()
     sys.run()
     
