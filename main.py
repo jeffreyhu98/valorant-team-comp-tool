@@ -1,3 +1,4 @@
+from system import System
 from omen import Omen
 from breach import Breach
 from chamber import Chamber
@@ -11,7 +12,8 @@ todo:
     -add all agents
     -create text-based UI system
     -change tests into assert statements
-    -add class to handle the analysis
+    -add class to handle the analysis (system class)
+        -add validation/checks to system class
     -add role to agents
 
 ideas:
@@ -21,7 +23,6 @@ ideas:
     -composition overview (1 controller, 2 initiator, 1 duelist, 1 controller, etc)
     -recs based on agents
 '''
-
 
 def test_omen():
     player = Omen()
@@ -105,6 +106,8 @@ def main():
         test_chamber()
         test_kayo()
         test_sova()
-
+    sys = System()
+    sys.run()
+    
 if __name__ == "__main__":
     main()
