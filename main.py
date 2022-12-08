@@ -32,6 +32,7 @@ def main():
         test.test_sova()
         test.test_viper()
         test.test_reyna()
+        test.test_fade()
 
     sys = System()
     sys.run()

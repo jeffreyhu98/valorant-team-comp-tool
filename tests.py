@@ -6,6 +6,7 @@ from agents.kayo import Kayo
 from agents.sova import Sova
 from agents.viper import Viper
 from agents.reyna import Reyna
+from agents.fade import Fade
 
 class Test():
 
@@ -123,3 +124,19 @@ class Test():
         assert(player.operator == 0)
         assert(player.flush == 0)
         assert(player.delay == 0)
+
+    def test_fade(self):
+        player = Fade()
+        print("---- TESTING FADE ----")
+        assert(player.role == Role.INITIATOR)
+        assert(player.smoke == 0)
+        assert(player.trip == 0)
+        assert(player.reconSoft == 0)
+        assert(player.reconHard == 1)
+        assert(player.drone == 1)
+        assert(player.flash == 0)
+        assert(player.nearsight == 1)
+        assert(player.stun == 0)
+        assert(player.operator == 0)
+        assert(player.flush == 0)
+        assert(player.delay == 1)
