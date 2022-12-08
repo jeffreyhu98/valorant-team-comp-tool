@@ -1,5 +1,9 @@
 from role import Role
 
+'''
+    Parent/Base class for agents
+    @param name: string representing the agent's name
+'''
 class Agent:
     def __init__(self, name):
         self.name = name

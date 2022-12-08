@@ -1,9 +1,9 @@
 from role import Role
-from omen import Omen
-from breach import Breach
-from chamber import Chamber
-from kayo import Kayo
-from sova import Sova
+from agents.omen import Omen
+from agents.breach import Breach
+from agents.chamber import Chamber
+from agents.kayo import Kayo
+from agents.sova import Sova
 
 class Test():
 
