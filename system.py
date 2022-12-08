@@ -3,6 +3,7 @@ from agents.breach import Breach
 from agents.chamber import Chamber
 from agents.kayo import Kayo
 from agents.sova import Sova
+from agents.viper import Viper
 
 '''
     Handles the text-based UI system (loops until the user quits the program)

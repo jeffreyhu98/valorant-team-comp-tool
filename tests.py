@@ -4,6 +4,8 @@ from agents.breach import Breach
 from agents.chamber import Chamber
 from agents.kayo import Kayo
 from agents.sova import Sova
+from agents.viper import Viper
+from agents.reyna import Reyna
 
 class Test():
 
@@ -88,4 +90,36 @@ class Test():
         assert(player.stun == 0)
         assert(player.operator == 0)
         assert(player.flush == 1)
+        assert(player.delay == 0)
+
+    def test_viper(self):
+        player = Viper()
+        print("---- TESTING VIPER ----")
+        assert(player.role == Role.CONTROLLER)
+        assert(player.smoke == 1)
+        assert(player.trip == 0)
+        assert(player.reconSoft == 0)
+        assert(player.reconHard == 0)
+        assert(player.drone == 0)
+        assert(player.flash == 0)
+        assert(player.nearsight == 0)
+        assert(player.stun == 0)
+        assert(player.operator == 0)
+        assert(player.flush == 2)
+        assert(player.delay == 2)
+
+    def test_reyna(self):
+        player = Reyna()
+        print("---- TESTING REYNA ----")
+        assert(player.role == Role.DUELIST)
+        assert(player.smoke == 0)
+        assert(player.trip == 0)
+        assert(player.reconSoft == 0)
+        assert(player.reconHard == 0)
+        assert(player.drone == 0)
+        assert(player.flash == 0)
+        assert(player.nearsight == 1)
+        assert(player.stun == 0)
+        assert(player.operator == 0)
+        assert(player.flush == 0)
         assert(player.delay == 0)

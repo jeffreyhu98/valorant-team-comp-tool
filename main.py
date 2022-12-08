@@ -9,6 +9,7 @@ todo:
     -create text-based UI system
     -add class to handle the analysis (system class)
         -add validation/checks to system class
+    -adjust attributes (1/0 To T/F?)
 
 ideas:
     -recs based on map
@@ -29,6 +30,8 @@ def main():
         test.test_chamber()
         test.test_kayo()
         test.test_sova()
+        test.test_viper()
+        test.test_reyna()
 
     sys = System()
     sys.run()
